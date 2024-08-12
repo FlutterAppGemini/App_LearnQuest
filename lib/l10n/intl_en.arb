@@ -1,0 +1,111 @@
+{
+  "@@locale": "en",
+
+  "gemini_create_course_prompt": "Generate a course on the topic '{topic}'. Expected structure for a new course:\n{ \n    \"title\": \"title\", \n    \"icon\": \"icon from the list: {iconList}\", \n    \"color\": \"A string representing a color in hexadecimal format (without the hash sign)\", \n    \"description\": \"Brief description of the subject or what will be covered\", \n    \"lessons\": [ \n        { \n            \"title\": \"Lesson title\", \n            \"content\": \"Detailed lesson content, provided in a clear and example-driven manner\", \n            \"game\": [ \n                { \n                    \"question\": \"Question 1\", \n                    \"response\": [ \n                        \"Answer 1\", \n                        \"Answer 2\", \n                        \"Answer 3\", \n                        \"Answer 4\", \n                        \"Answer 5\" \n                    ], \n                    \"solution\": \"Answer 1\" \n                } \n            ] \n        } \n    ] \n} \n Expected structure for a lesson continuation: \n{ \n    \"title\": \"Title of the next lesson\", \n    \"content\": \"Detailed content for the entire lesson, with clear examples\", \n    \"progress\": 0.0, \n    \"game\": [ \n        { \n            \"question\": \"Question 1\", \n            \"response\": [ \n                \"Answer 1\", \n                \"Answer 2\", \n                \"Answer 3\", \n                \"Answer 4\", \n                \"Answer 5\" \n            ], \n            \"solution\": \"Answer 1\" \n        } \n    ] \n}",
+  "gemini_system_instruction": "Expected structure for a new course: \n{ \n    \"title\": \"title\", \n    \"icon\": \"icon from the list: {iconList}\", \n    \"color\": \"A string representing a color in hexadecimal format (without the hash sign)\", \n    \"description\": \"Brief description of the subject or what will be covered\", \n    \"lessons\": [ \n        { \n            \"title\": \"Lesson title\", \n            \"content\": \"Detailed lesson content, provided in a clear and example-driven manner\", \n            \"game\": [ \n                { \n                    \"question\": \"Question 1\", \n                    \"response\": [ \n                        \"Answer 1\", \n                        \"Answer 2\", \n                        \"Answer 3\", \n                        \"Answer 4\", \n                        \"Answer 5\" \n                    ], \n                    \"solution\": \"Answer 1\" \n                } \n            ] \n        } \n    ] \n} \n Expected structure for a lesson continuation: \n{ \n    \"title\": \"Title of the next lesson\", \n    \"content\": \"Detailed content for the entire lesson, with clear examples\", \n    \"progress\": 0.0, \n    \"game\": [ \n        { \n            \"question\": \"Question 1\", \n            \"response\": [ \n                \"Answer 1\", \n                \"Answer 2\", \n                \"Answer 3\", \n                \"Answer 4\", \n                \"Answer 5\" \n            ], \n            \"solution\": \"Answer 1\" \n        } \n    ] \n} \n\n1. When requesting an initial course on a topic, the response should follow the first structure.\n2. When requesting a continuation of a lesson on a topic, the response should follow the second structure.\n3. \"game\" is an array of questions (between 5 and 8).\n4. \"response\" is an array of answers (between 4 and 7), where one is correct and should be specified as a string in \"solution\".\n5. When requesting a new lesson for a previously given topic, the content should advance incrementally, avoiding repetition of previous lessons, and keeping the content clear and well-explained.\n6. Do not include images or links.",
+  "gemini_create_lesson_prompt":"Generate a new lesson for the course '{courseTitle}'. Here is a summary of the last lessons:\n{summary}\nContinue the course with a new lesson related to these topics.Expected structure for a lesson continuation: \n{ \n    \"title\": \"Title of the next lesson\", \n    \"content\": \"Detailed content for the entire lesson, with clear examples\", \n    \"progress\": 0.0, \n    \"game\": [ \n        { \n            \"question\": \"Question 1\", \n            \"response\": [ \n                \"Answer 1\", \n                \"Answer 2\", \n                \"Answer 3\", \n                \"Answer 4\", \n                \"Answer 5\" \n            ], \n            \"solution\": \"Answer 1\" \n        } \n    ] \n} ",
+  "gemini_is_inappropriate_prompt": "Is the topic '{topic}' inappropriate according to GeminiAIs standards? the response should follow this JSON format: \n{ \n    \"reason\": \"Explanation of why the topic is inappropriate or if it is not\", \n    \"value\": \"true or false (this is a boolean)\" \n}",
+
+
+  "create_course_inappropriate_error": "The topic you want to learn is inappropriate",
+  "create_course_inappropriate_warning": "Inappropriate topics are not allowed",
+  "total_lessons": "{totalLessons} lesson(s)",
+  "welcome_text": "Welcome to",
+  "enter_topic_hint": "Enter a topic to learn",
+  "your_courses": "Your courses",
+
+
+  "unbookmark_course_title": "Unbookmark Course",
+  "unbookmark_course_text": "Are you sure you want to unbookmark this course? \nPlease note that this will remove the course from your Firebase account and you won't be able to recover it.",
+  "delete_course_title": "Delete course",
+  "delete_course_text": "Are you sure you want to delete this course? \nThis will permanently remove the course from this app, and it will no longer appear in your courses list, unless you bookmark it and save it to your account.",
+  "yes_button": "Yes",
+  "no_button": "No",
+  "course_deleted_message": "Course successfully deleted",
+  "incomplete_lessons_alert_text": "You have {lessonsIncomplete} incomplete lessons.\nComplete them to generate more.",
+
+  "delete_course": "Delete",
+  "description": "Description",
+  "lessons": "Lessons",
+  "course_overview": "Course Overview",
+  "overall_progress": "Overall Progress",
+  "continue_where_left_off": "Continue where you left off",
+  "generate_new_lesson": "Generate new Lesson",
+  "course_completed": "complete - {completedLessons} of {totalLessons} lessons completed",
+
+
+  "start_game_label": "Start Game",
+  "complete_lesson_text": "Complete Lesson",
+  "no_lessons_saved": "You haven't saved any lessons yet",
+
+
+  "play_again_button": "Play Again",
+  "back_to_lesson_button": "Back to Lesson",
+  "completion_label": "Completion",
+  "total_question_label": "Total Questions",
+  "correct_label": "Correct",
+  "wrong_label": "Wrong",
+  "correct_answer_prefix": "Correct Answer:",
+
+
+  "select_answer_warning": "You must select an answer to continue.",
+  "question_progress": "Question {current}/{total}",
+  "previous_button": "Previous",
+  "submit_button": "Submit",
+  "next_button": "Next",
+  "quit_quiz_warning_message": "Are you sure you want to quit the quiz? All your progress will be lost.",
+  "quit_quiz_warning_title": "Warning!",
+  "quiz_title": "Quiz",
+
+
+  "statistic_courses": "Cursos",
+
+
+  "button_start": "Start",
+  "welcome_title_1": "Welcome to LearnQuest",
+  "welcome_description_1": "Discover a world of personalized learning. Generate study paths tailored to your goals and preferences.",
+  "welcome_title_2": "Explore and Learn",
+  "welcome_description_2": "Navigate through an interactive map, complete levels, and unlock worlds of knowledge. Learn while having fun.",
+  "welcome_title_3": "Customize and Connect",
+  "welcome_description_3": "Adjust your learning path according to your needs. Join a community of learners and share your progress.",
+
+
+  "snackbar_error_message": "Oops... Something went wrong",
+  "continue_as_guest_button": "Continue as guest",
+  "log_in_with_google_button": "Log in with Google",
+
+
+  "user_name": "Guest",
+  "preferences_label": "PREFERENCES",
+  "language_option": "Language",
+  "dark_mode_option": "Dark Mode",
+  "account_label": "ACCOUNT",
+  "help_option": "Frequently Asked Questions",
+  "logout_option": "Logout",
+  "idiom_text":"English",
+
+
+  "faq_what_is_learnquest": "What is LearnQuest?",
+  "faq_what_is_learnquest_answer": "LearnQuest is an innovative app designed to provide a personalized learning experience, offering interactive courses in various disciplines that allow you to progress at your own pace.",
+  
+  "faq_how_does_learnquest_work": "How does LearnQuest work?",
+  "faq_how_does_learnquest_work_answer": "LearnQuest uses advanced artificial intelligence technology to tailor educational content to your needs. You can follow interactive lessons, track your progress, and learn anytime, anywhere.",
+  
+  "faq_need_internet": "Do I need to be connected to the Internet to use LearnQuest?",
+  "faq_need_internet_answer": "Yes, an Internet connection is required to access the courses and lessons. However, we are working on implementing offline access features in future updates.",
+  
+  "faq_how_to_register": "How can I register for LearnQuest?",
+  "faq_how_to_register_answer": "You can register for LearnQuest using your email address or Google account. Simply download the app and follow the instructions to create your account.",
+  
+  "faq_is_learnquest_free": "Is LearnQuest free?",
+  "faq_is_learnquest_free_answer": "Currently, LearnQuest is free. We offer full access to courses and lessons at no additional cost.",
+  
+  "faq_change_language": "Can I change the language of the app?",
+  "faq_change_language_answer": "Yes, LearnQuest is available in English and Spanish. You can change the language from the app's settings section.",
+  
+  "faq_track_progress": "How can I track my progress?",
+  "faq_track_progress_answer": "Each course in LearnQuest has a progress section where you can see how many lessons you've completed and how many are left.",
+  
+  "faq_multiple_devices": "Can I access LearnQuest from multiple devices?",
+  "faq_multiple_devices_answer": "Yes, you can access your LearnQuest account from multiple devices. Just sign in with your account on each device to sync your progress."
+}

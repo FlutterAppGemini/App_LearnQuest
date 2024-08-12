@@ -1,0 +1,111 @@
+{
+  "@@locale": "es",
+
+
+  "gemini_create_course_prompt": "Genera un curso sobre el tema '{topic}'.",
+  "gemini_system_instruction": "Estructura esperada para un curso nuevo: \n{ \n    \"title\":  \"titulo\", \n     \"icon\":  \"icono de la lista: {iconList}\", \n    \"color\": \"es un String que representa un color pero en sistema hexadecimal(no incluyas el numeral)\", \n     \"description\":  \"descripcion breve de la materia o lo que se verá\", \n     \"lessons\": [ \n        { \n             \"title\":  \"titulo de la leccion\", \n             \"content\":  \"contenido de toda la leccion, información a modo de texto, lo más detallado y con ejemplos claros\", \n             \"game\": [ \n                { \n                     \"question\":  \"pregunta 1\", \n                     \"response\": [ \n                         \"respuesta 1\", \n                         \"respuesta 2\", \n                         \"respuesta 3\", \n                         \"respuesta 4\", \n                         \"respuesta 5\" \n                    ], \n                     \"solution\":  \"respuesta 1\" \n                } \n            ] \n        } \n    ] \n} \n Estructura esperada para la continuación de una lección: \n{ \n     \"title\":  \"titulo de la lección siguiente\", \n     \"content\":  \"contenido de toda la lección, información a modo de texto, lo más detallado y con ejemplos claros\", \n     \"progress\": 0.0, \n     \"game\": [ \n        { \n             \"question\":  \"pregunta 1\", \n             \"response\": [ \n                 \"respuesta 1\", \n                 \"respuesta 2\", \n                 \"respuesta 3\", \n                 \"respuesta 4\", \n                 \"respuesta 5\" \n            ], \n             \"solution\":  \"respuesta 1\" \n        } \n    ] \n} \n\n1. Al solicitar un curso inicial sobre un tema, la respuesta debe seguir la primera estructura.\n2. Al solicitar la continuación de una lección sobre un tema, la respuesta debe seguir la segunda estructura.\n3. \"game\" es un array de preguntas (entre 5 y 8).\n4. \"response\" es un array de respuestas (entre 4 y 7) donde 1 es correcta e irá como String en \"solution\".\n5. Al solicitar una nueva lección para un tema ya dado, se debe proporcionar contenido que avance de manera incremental, asegurando no repetir lecciones anteriores y mantener el contenido claro y bien explicado.\n6. No incluyas imágenes o links.",
+  "gemini_create_lesson_prompt":"Genera una nueva lección para el curso '{courseTitle}'. Aquí tienes un resumen de las últimas lecciones:\n{summary}\nContinúa el curso con una nueva lección relacionada con estos temas.",
+  "gemini_is_inappropriate_prompt": "¿El tema de {topic} es inapropiado según los cánones de GeminiAI? la respuesta debe seguir el siguiente formato JSON: \n{ \n     \"reason\":  \"motivo explicando por qué es inapropiado o si no lo es\", \n     \"value\":  \"true o false (esto es un booleano)\" \n}",
+  
+
+  "create_course_inappropriate_error": "El tema que deseas aprender es inapropiado",
+  "create_course_inappropriate_warning": "Los temas inapropiados no están permitidos",
+  "total_lessons": "{totalLessons} lección(es)",
+  "welcome_text": "Bienvenido a",
+  "enter_topic_hint": "Ingresa un tema para aprender",
+  "your_courses": "Tus cursos",
+
+
+  "unbookmark_course_title": "Desmarcar Curso",
+  "unbookmark_course_text": "¿Estás seguro de que quieres desmarcar este curso? \nTen en cuenta que esto eliminará el curso de tu cuenta de Firebase y no podrás recuperarlo.",
+  "delete_course_title": "Eliminar curso",
+  "delete_course_text": "¿Estás seguro de que quieres eliminar este curso? \nEsto eliminará permanentemente el curso de esta aplicación, y ya no aparecerá en tu lista de cursos, a menos que lo marques y lo guardes en tu cuenta.",
+  "yes_button": "Sí",
+  "no_button": "No",
+  "course_deleted_message": "Curso eliminado con éxito",
+  "incomplete_lessons_alert_text": "Tienes {lessonsIncomplete} lecciones incompletas.\nCompletalas para generar más.",
+
+  "delete_course": "Eliminar",
+  "description": "Descripción",
+  "lessons": "Lecciones",
+  "course_overview": "Vista general del curso",
+  "overall_progress": "Progreso general",
+  "continue_where_left_off": "Continúa donde lo dejaste",
+  "generate_new_lesson": "Generar nueva lección",
+  "course_completed": "completo - {completedLessons} de {totalLessons} lecciones completadas",
+
+
+  "start_game_label": "Iniciar Juego",
+  "complete_lesson_text": "Completar Lección",
+  "no_lessons_saved": "Aún no ha guardado ninguna lección",
+
+
+  "play_again_button": "Jugar de Nuevo",
+  "back_to_lesson_button": "Volver a la Lección",
+  "completion_label": "Finalización",
+  "total_question_label": "Total de Preguntas",
+  "correct_label": "Correctas",
+  "wrong_label": "Incorrectas",
+  "correct_answer_prefix": "Respuesta Correcta:",
+
+
+  "select_answer_warning": "Debes seleccionar una respuesta para continuar.",
+  "question_progress": "Pregunta {current}/{total}",
+  "previous_button": "Anterior",
+  "submit_button": "Enviar",
+  "next_button": "Siguiente",
+  "quit_quiz_warning_message": "¿Estás seguro de que quieres salir del cuestionario? Todo tu progreso se perderá.",
+  "quit_quiz_warning_title": "¡Advertencia!",
+  "quiz_title": "Cuestionario",
+
+
+  "statistic_courses": "Courses",
+
+
+  "button_start": "Comenzar",
+  "welcome_title_1": "Bienvenido a LearnQuest",
+  "welcome_description_1": "Descubre un mundo de aprendizaje personalizado. Genera rutas de estudio adaptadas a tus objetivos y preferencias.",
+  "welcome_title_2": "Explora y Aprende",
+  "welcome_description_2": "Navega a través de un mapa interactivo, completa niveles y desbloquea mundos de conocimiento. Aprende jugando y diviértete.",
+  "welcome_title_3": "Personaliza y Conecta",
+  "welcome_description_3": "Ajusta tu ruta de aprendizaje según tus necesidades. Únete a una comunidad de aprendices y comparte tus progresos.",
+
+
+  "snackbar_error_message": "Ups... Algo salió mal",
+  "continue_as_guest_button": "Continuar como invitado",
+  "log_in_with_google_button": "Iniciar sesión con Google",
+
+  "user_name": "Invitado",
+  "preferences_label": "PREFERENCIAS",
+  "language_option": "Idioma",
+  "dark_mode_option": "Modo Oscuro",
+  "account_label": "CUENTA",
+  "help_option": "Preguntas Frecuentes",
+  "logout_option": "Cerrar Sesión",
+  "idiom_text":"Español",
+
+
+  "faq_what_is_learnquest": "¿Qué es LearnQuest?",
+  "faq_what_is_learnquest_answer": "LearnQuest es una aplicación innovadora diseñada para ofrecer una experiencia de aprendizaje personalizada, con cursos interactivos en diversas disciplinas que te permiten avanzar a tu propio ritmo.",
+  
+  "faq_how_does_learnquest_work": "¿Cómo funciona LearnQuest?",
+  "faq_how_does_learnquest_work_answer": "LearnQuest utiliza tecnología avanzada de inteligencia artificial para adaptar el contenido educativo a tus necesidades. Puedes seguir lecciones interactivas, realizar un seguimiento de tu progreso y aprender en cualquier momento y lugar.",
+  
+  "faq_need_internet": "¿Es necesario estar conectado a Internet para usar LearnQuest?",
+  "faq_need_internet_answer": "Sí, se requiere una conexión a Internet para acceder a los cursos y lecciones. Sin embargo, estamos trabajando en implementar funciones de acceso sin conexión en futuras actualizaciones.",
+  
+  "faq_how_to_register": "¿Cómo puedo registrarme en LearnQuest?",
+  "faq_how_to_register_answer": "Puedes registrarte en LearnQuest utilizando tu dirección de correo electrónico o tu cuenta de Google. Simplemente descarga la aplicación y sigue las instrucciones para crear tu cuenta.",
+  
+  "faq_is_learnquest_free": "¿LearnQuest es una aplicación gratuita?",
+  "faq_is_learnquest_free_answer": "Actualmente, LearnQuest es gratuito. Ofrecemos acceso completo a los cursos y lecciones sin costo adicional.",
+  
+  "faq_change_language": "¿Puedo cambiar el idioma de la aplicación?",
+  "faq_change_language_answer": "Sí, LearnQuest está disponible en inglés y español. Puedes cambiar el idioma desde la sección de configuración de la aplicación.",
+  
+  "faq_track_progress": "¿Cómo puedo hacer un seguimiento de mi progreso?",
+  "faq_track_progress_answer": "Cada curso en LearnQuest tiene una sección de progreso donde puedes ver cuántas lecciones has completado y cuántas aún te quedan por completar.",
+  
+  "faq_multiple_devices": "¿Puedo acceder a LearnQuest desde varios dispositivos?",
+  "faq_multiple_devices_answer": "Sí, puedes acceder a tu cuenta de LearnQuest desde múltiples dispositivos. Solo necesitas iniciar sesión con tu cuenta en cada dispositivo para sincronizar tu progreso."
+}
