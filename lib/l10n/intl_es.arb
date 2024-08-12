@@ -63,13 +63,6 @@
 
 
   "button_start": "Comenzar",
-  "welcome_title_1": "Bienvenido a LearnQuest",
-  "welcome_description_1": "Descubre un mundo de aprendizaje personalizado. Genera rutas de estudio adaptadas a tus objetivos y preferencias.",
-  "welcome_title_2": "Explora y Aprende",
-  "welcome_description_2": "Navega a través de un mapa interactivo, completa niveles y desbloquea mundos de conocimiento. Aprende jugando y diviértete.",
-  "welcome_title_3": "Personaliza y Conecta",
-  "welcome_description_3": "Ajusta tu ruta de aprendizaje según tus necesidades. Únete a una comunidad de aprendices y comparte tus progresos.",
-
 
   "snackbar_error_message": "Ups... Algo salió mal",
   "continue_as_guest_button": "Continuar como invitado",

@@ -156,19 +156,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unbookmark_course_title":
             MessageLookupByLibrary.simpleMessage("Unbookmark Course"),
         "user_name": MessageLookupByLibrary.simpleMessage("Guest"),
-        "welcome_description_1": MessageLookupByLibrary.simpleMessage(
-            "Discover a world of personalized learning. Generate study paths tailored to your goals and preferences."),
-        "welcome_description_2": MessageLookupByLibrary.simpleMessage(
-            "Navigate through an interactive map, complete levels, and unlock worlds of knowledge. Learn while having fun."),
-        "welcome_description_3": MessageLookupByLibrary.simpleMessage(
-            "Adjust your learning path according to your needs. Join a community of learners and share your progress."),
         "welcome_text": MessageLookupByLibrary.simpleMessage("Welcome to"),
-        "welcome_title_1":
-            MessageLookupByLibrary.simpleMessage("Welcome to LearnQuest"),
-        "welcome_title_2":
-            MessageLookupByLibrary.simpleMessage("Explore and Learn"),
-        "welcome_title_3":
-            MessageLookupByLibrary.simpleMessage("Customize and Connect"),
         "wrong_label": MessageLookupByLibrary.simpleMessage("Wrong"),
         "yes_button": MessageLookupByLibrary.simpleMessage("Yes"),
         "your_courses": MessageLookupByLibrary.simpleMessage("Your courses")

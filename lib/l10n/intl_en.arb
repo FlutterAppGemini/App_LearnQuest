@@ -62,13 +62,6 @@
 
 
   "button_start": "Start",
-  "welcome_title_1": "Welcome to LearnQuest",
-  "welcome_description_1": "Discover a world of personalized learning. Generate study paths tailored to your goals and preferences.",
-  "welcome_title_2": "Explore and Learn",
-  "welcome_description_2": "Navigate through an interactive map, complete levels, and unlock worlds of knowledge. Learn while having fun.",
-  "welcome_title_3": "Customize and Connect",
-  "welcome_description_3": "Adjust your learning path according to your needs. Join a community of learners and share your progress.",
-
 
   "snackbar_error_message": "Oops... Something went wrong",
   "continue_as_guest_button": "Continue as guest",

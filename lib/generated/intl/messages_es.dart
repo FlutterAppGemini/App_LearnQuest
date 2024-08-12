@@ -159,19 +159,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unbookmark_course_title":
             MessageLookupByLibrary.simpleMessage("Desmarcar Curso"),
         "user_name": MessageLookupByLibrary.simpleMessage("Invitado"),
-        "welcome_description_1": MessageLookupByLibrary.simpleMessage(
-            "Descubre un mundo de aprendizaje personalizado. Genera rutas de estudio adaptadas a tus objetivos y preferencias."),
-        "welcome_description_2": MessageLookupByLibrary.simpleMessage(
-            "Navega a través de un mapa interactivo, completa niveles y desbloquea mundos de conocimiento. Aprende jugando y diviértete."),
-        "welcome_description_3": MessageLookupByLibrary.simpleMessage(
-            "Ajusta tu ruta de aprendizaje según tus necesidades. Únete a una comunidad de aprendices y comparte tus progresos."),
         "welcome_text": MessageLookupByLibrary.simpleMessage("Bienvenido a"),
-        "welcome_title_1":
-            MessageLookupByLibrary.simpleMessage("Bienvenido a LearnQuest"),
-        "welcome_title_2":
-            MessageLookupByLibrary.simpleMessage("Explora y Aprende"),
-        "welcome_title_3":
-            MessageLookupByLibrary.simpleMessage("Personaliza y Conecta"),
         "wrong_label": MessageLookupByLibrary.simpleMessage("Incorrectas"),
         "yes_button": MessageLookupByLibrary.simpleMessage("Sí"),
         "your_courses": MessageLookupByLibrary.simpleMessage("Tus cursos")

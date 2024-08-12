@@ -510,66 +510,6 @@ class S {
     );
   }
 
-  /// `Welcome to LearnQuest`
-  String get welcome_title_1 {
-    return Intl.message(
-      'Welcome to LearnQuest',
-      name: 'welcome_title_1',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Discover a world of personalized learning. Generate study paths tailored to your goals and preferences.`
-  String get welcome_description_1 {
-    return Intl.message(
-      'Discover a world of personalized learning. Generate study paths tailored to your goals and preferences.',
-      name: 'welcome_description_1',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Explore and Learn`
-  String get welcome_title_2 {
-    return Intl.message(
-      'Explore and Learn',
-      name: 'welcome_title_2',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Navigate through an interactive map, complete levels, and unlock worlds of knowledge. Learn while having fun.`
-  String get welcome_description_2 {
-    return Intl.message(
-      'Navigate through an interactive map, complete levels, and unlock worlds of knowledge. Learn while having fun.',
-      name: 'welcome_description_2',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Customize and Connect`
-  String get welcome_title_3 {
-    return Intl.message(
-      'Customize and Connect',
-      name: 'welcome_title_3',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Adjust your learning path according to your needs. Join a community of learners and share your progress.`
-  String get welcome_description_3 {
-    return Intl.message(
-      'Adjust your learning path according to your needs. Join a community of learners and share your progress.',
-      name: 'welcome_description_3',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Oops... Something went wrong`
   String get snackbar_error_message {
     return Intl.message(

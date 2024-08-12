@@ -86,38 +86,6 @@ class _WelcomePageState extends State<WelcomePage>
 
   @override
   Widget build(BuildContext context) {
-    final pages = [
-      PageViewModel(
-        const Color(0xFF5DADE2),
-        'assets/images/welcome1.png',
-        S.of(context).welcome_title_1,
-        S.of(context).welcome_description_1,
-        const Icon(
-          Icons.phone_android,
-          color: Colors.white,
-        ),
-      ),
-      PageViewModel(
-        const Color(0xFF8E44AD),
-        'assets/images/welcome2.png',
-        S.of(context).welcome_title_2,
-        S.of(context).welcome_description_2,
-        const Icon(
-          Icons.travel_explore,
-          color: Colors.white,
-        ),
-      ),
-      PageViewModel(
-        const Color(0xFFBB8FCE),
-        'assets/images/welcome3.png',
-        S.of(context).welcome_title_3,
-        S.of(context).welcome_description_3,
-        const Icon(
-          Icons.school,
-          color: Colors.white,
-        ),
-      ),
-    ];
     return Scaffold(
       body: Stack(
         children: [
@@ -163,38 +131,6 @@ class Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pages = [
-      PageViewModel(
-        const Color(0xFF5DADE2),
-        'assets/images/welcome1.png',
-        S.of(context).welcome_title_1,
-        S.of(context).welcome_description_1,
-        const Icon(
-          Icons.phone_android,
-          color: Colors.white,
-        ),
-      ),
-      PageViewModel(
-        const Color(0xFF8E44AD),
-        'assets/images/welcome2.png',
-        S.of(context).welcome_title_2,
-        S.of(context).welcome_description_2,
-        const Icon(
-          Icons.travel_explore,
-          color: Colors.white,
-        ),
-      ),
-      PageViewModel(
-        const Color(0xFFBB8FCE),
-        'assets/images/welcome3.png',
-        S.of(context).welcome_title_3,
-        S.of(context).welcome_description_3,
-        const Icon(
-          Icons.school,
-          color: Colors.white,
-        ),
-      ),
-    ];
     return Container(
       width: double.infinity,
       color: viewModel.color,
@@ -257,3 +193,36 @@ class Page extends StatelessWidget {
     );
   }
 }
+
+final pages = [
+  PageViewModel(
+    const Color(0xFF5DADE2),
+    'assets/images/welcome1.png',
+    'Bienvenido a LearnQuest',
+    'Descubre un mundo de aprendizaje personalizado. Genera rutas de estudio adaptadas a tus objetivos y preferencias.',
+    const Icon(
+      Icons.phone_android,
+      color: Colors.white,
+    ),
+  ),
+  PageViewModel(
+    const Color(0xFF8E44AD),
+    'assets/images/welcome2.png',
+    'Explora y Aprende',
+    'Navega a través de un mapa interactivo, completa niveles y desbloquea mundos de conocimiento. Aprende jugando y diviértete.',
+    const Icon(
+      Icons.travel_explore,
+      color: Colors.white,
+    ),
+  ),
+  PageViewModel(
+    const Color(0xFFBB8FCE),
+    'assets/images/welcome3.png',
+    'Personaliza y Conecta',
+    'Ajusta tu ruta de aprendizaje según tus necesidades. Únete a una comunidad de aprendices y comparte tus progresos.',
+    const Icon(
+      Icons.school,
+      color: Colors.white,
+    ),
+  ),
+];
